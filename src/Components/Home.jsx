@@ -1,11 +1,17 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
+import { Environment, Html, Scroll, ScrollControls } from "@react-three/drei";
+import { Suspense, useState } from "react";
+import ReactTyped from "react-typed";
 import Experience from "./Experience.jsx";
-import { Environment, Html, Scroll, ScrollControls, useProgress } from "@react-three/drei";
 import Interface from "./Interface";
-import { Suspense, useRef, Component } from "react";
+import ScrollManager from "./ScrollManager.jsx";
+import Menu from "./Menu.jsx";
 
 
 export default function Home (){
+    const [section,setSection] = useState(0);
+    const [menuOpened, setMenuOpened] =useState(false)
+
     return(
         <>
             <Canvas
@@ -17,6 +23,7 @@ export default function Home (){
                 <Suspense fallback={<Loading />}>
                     <ambientLight intensity={1} />
                     <ScrollControls pages={4} damping={0.3}>
+                        <ScrollManager section={section} onSectionChange={setSection}/>
                         <Scroll>
                             <Experience />
                         </Scroll>
@@ -27,26 +34,17 @@ export default function Home (){
                     <Environment preset="city" />
                 </Suspense>
             </Canvas>
+            <Menu onSectionChange={setSection} menuOpened={menuOpened} setMenuOpened={setMenuOpened}/>
         </>
     )
 }
 
 const Loading =()=> {
-    const {progress} = useProgress()
-    const divRef = useRef();
-
-    useFrame(() => {
-        const newRotation = (progress * 360) / 100; // Convert progress to degrees
-        if (divRef.current) {
-          divRef.current.style.transform = `rotate(${newRotation}deg)`;
-        }
-    });
-
     return (
         <Html center>
-            <div className="flex flex-col items-center justify-center text-center">
-                <div className="font-bold">Now<br />{Math.floor(progress)} % loaded</div>
-                <img ref={divRef} src="\textures\IMG_3367_w_trans.svg" className="w-20 h-20 p-2 rounded-full"/>
+            <div className="flex flex-col items-center justify-center text-center whitespace-nowrap">
+                <ReactTyped className="w-auto font-bold md:text-5xl sm:text-4xl text-xl" strings={["Loading","読み込み中"]} typeSpeed={40} backSpeed={40} loop/>
+                <div className="animate-spin inline-block w-10 h-10 border-[3px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading" />
             </div>
         </Html>
     );
