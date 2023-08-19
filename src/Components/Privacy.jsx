@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
-export default function Privacy(){
-    return(
+export default function Privacy() {
+    return (
         <motion.div className="h-screen w-screen flex flex-col items-center justify-start"
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            transition={{duration:1}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
         >
             <div className="mx-auto p-8 max-auto max-w-screen-2xl px-4 md:px-8">
                 <div className="mb-10 md:mb-16">
@@ -64,7 +64,7 @@ export default function Privacy(){
                 <div className="my-20 flex items-center justify-center">
                     <Link to="/">
                         <button className="px-5 py-4 text-base font-bold text-center transition duration-500 ease-in-out transform bg-white lg:px-10 rounded-xl hover:bg-blue-400 hover:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-                        ホームに戻る
+                            ホームに戻る
                         </button>
                     </Link>
                 </div>
