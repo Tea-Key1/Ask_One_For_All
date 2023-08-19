@@ -28,7 +28,7 @@ export default function Home() {
             }}
         >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a type="button" onClick={()=> setSection(0)} className="flex items-center">
+                <a href="/" className="flex items-center">
                     <img src="/textures/astronauts.svg" className="h-10 w-10 mr-3 filter brightness-100" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap">Ask One</span>
                 </a>
