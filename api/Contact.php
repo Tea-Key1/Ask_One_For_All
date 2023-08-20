@@ -16,7 +16,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -28,19 +28,19 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <?php if ($mode == "input") { ?>
         <form action="api/Contact.php" method="post">
             名前<input type="text" name="fullname" value="<?php echo $_SESSION["fullname"] ?>" /></input><br>
-            メール<input type="email" name="email" value="<?php echo $_SESSION["fullname"] ?>" /></input><br>
+            メール<input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" /></input><br>
             お問い合わせ内容<br>
-            <textarea cols="40" rows="8" name="messaage"><?php echo $_SESSION["fullname"] ?></textarea><br>
+            <textarea cols="40" rows="8" name="messaage"><?php echo $_SESSION["message"] ?></textarea><br>
             <input type="submit" name="confirm" value="確認" /></input>
         </form>
     <?php } else if ($mode == "confirm") { ?>
-            <form action="./Contact.php" method="post">
+            <form action="api/Contact.php" method="post">
                 名前
-            <?php echo $_POST["fullname"] ?><br>
+            <?php echo $_SESSION["fullname"] ?><br>
                 メール
-            <?php echo $_POST["email"] ?><br>
+            <?php echo $_SESSION["email"] ?><br>
                 お問い合わせ内容
-            <?php echo nl2br($_POST["message"]) ?><br>
+            <?php echo nl2br($_SESSION["message"]) ?><br>
                 <input type="submit" name="back" value="戻る"></input>
                 <input type="submit" name="send" value="送信"></input>
             </form>
