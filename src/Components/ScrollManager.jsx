@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useFrame } from "@react-three/fiber";
 
 export default function ScrollManager(props){
-    const { section, onSectionChange } = props;
+    const { section, setSection } = props;
     const data = useScroll();
     const lastScroll = useRef(0)
     const isAnimating = useRef(false)

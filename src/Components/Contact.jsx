@@ -21,65 +21,46 @@ export default function Contact() {
 
                         <p className="mx-auto max-w-screen-md text-start text-gray-500 md:text-lg"></p>
                     </div>
-                    <div className="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700">
+                    <form action="api/Contact.php" method="post">
+                        <div className="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700">
 
-                        <div className="sm:col-span-3">
-                            <label htmlFor="af-submit-application-full-name" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
-                                Full name
-                            </label>
-                        </div>
-
-                        <div className="sm:col-span-9">
-                            <div className="sm:flex">
-                                <input id="af-submit-application-full-name" type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
-                                <input type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
-                            </div>
-                        </div>
-
-                        <div className="sm:col-span-3">
-                            <label htmlFor="af-submit-application-email" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
-                                Email
-                            </label>
-                        </div>
-
-                        <div className="sm:col-span-9">
-                            <input id="af-submit-application-email" type="email" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
-                        </div>
-
-                        <div className="sm:col-span-3">
-                            <div className="inline-block">
-                                <label htmlFor="af-submit-application-phone" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
-                                    Phone
+                            <div className="sm:col-span-3">
+                                <label htmlFor="af-submit-application-full-name" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
+                                    Full name
                                 </label>
                             </div>
-                        </div>
 
-                        <div className="sm:col-span-9">
-                            <input id="af-submit-application-phone" type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                            <div className="sm:col-span-9">
+                                <div className="sm:flex">
+                                    <input id="af-submit-application-full-name" type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                                    <input type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                                </div>
+                            </div>
 
-                            <p className="mt-3">
-                                <a className="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium" href="../docs/index.html">
-                                    <svg className="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                    </svg>
-                                    Add phone
-                                </a>
-                            </p>
-                        </div>
-
-                        <div className="sm:col-span-3">
-                            <div className="inline-block">
-                                <label htmlFor="af-submit-application-current-company" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
-                                    Current Company
+                            <div className="sm:col-span-3">
+                                <label htmlFor="af-submit-application-email" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
+                                    Email
                                 </label>
                             </div>
-                        </div>
 
-                        <div className="sm:col-span-9">
-                            <input id="af-submit-application-current-company" type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                            <div className="sm:col-span-9">
+                                <input id="af-submit-application-email" type="email" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                            </div>
+
+                            <div className="sm:col-span-3">
+                                <div className="inline-block">
+                                    <label htmlFor="af-submit-application-phone" className="inline-block text-sm font-medium text-gray-500 mt-2.5">
+                                        Phone
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div className="sm:col-span-9">
+                                <input id="af-submit-application-current-company" type="text" className="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
+                            </div>
                         </div>
-                    </div>
+                    </form>
 
                     <div className="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700">
                         <div className="sm:col-span-12">
