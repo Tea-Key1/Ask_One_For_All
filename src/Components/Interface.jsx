@@ -80,7 +80,7 @@ const FooterSection = () => {
             <nav className="mb-2 sm:mb-4 xs:mb-2 flex flex-wrap justify-center gap-x-2 gap-y-1 md:justify-start md:gap-4 xs:gap-x-1 xs:gap-y-0">
               <a href="/question" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">よくある質問FAQ</a>
               <a href="/privacy" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">個人情報保護に関する方針</a>
-              <a href="api/Contact.php" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">お問い合わせ</a>
+              {/* <a href="/contact" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">お問い合わせ</a> */}
             </nav>
             <div className="text-gray-600 body-font">
               <div className="container px-2 py-2 xs:py-3 mx-auto flex items-center justify-center">

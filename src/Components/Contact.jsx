@@ -22,7 +22,7 @@ export default function Contact() {
                         <p className="mx-auto max-w-screen-md text-start text-gray-500 md:text-lg"></p>
                     </div>
 
-                    {/* <div
+                    <div
                         className="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700">
 
                         <div className="sm:col-span-12">
@@ -170,7 +170,7 @@ export default function Contact() {
                     <button type="button"
                         className="py-3 px-4 w-full inline-flex justify-center items-center rounded-md border border-transparent font-semibold bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
                         Submit application
-                    </button> */}
+                    </button>
 
 
                 </div>
