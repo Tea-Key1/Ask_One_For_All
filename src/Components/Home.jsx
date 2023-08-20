@@ -11,7 +11,6 @@ export default function Home() {
     const [section, setSection] = useState(0);
     // const [menuOpened, setMenuOpened] = useState(false)
 
-
     return (
         <>
             <Navigation setSection={setSection}/>
