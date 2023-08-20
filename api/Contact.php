@@ -30,7 +30,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
             名前<input type="text" name="fullname" value="<?php echo $_SESSION["fullname"] ?>" /></input><br>
             メール<input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" /></input><br>
             お問い合わせ内容<br>
-            <textarea cols="40" rows="8" name="messaage"><?php echo $_SESSION["message"] ?></textarea><br>
+            <textarea cols="40" rows="8" name="message"><?php echo $_SESSION["message"] ?></textarea><br>
             <input type="submit" name="confirm" value="確認" /></input>
         </form>
     <?php } else if ($mode == "confirm") { ?>
