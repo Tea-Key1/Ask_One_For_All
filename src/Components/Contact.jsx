@@ -171,13 +171,7 @@ export default function Contact() {
                         className="py-3 px-4 w-full inline-flex justify-center items-center rounded-md border border-transparent font-semibold bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
                         Submit application
                     </button> */}
-                    <form action="api/Contact.php" method="post">
-                        名前<input type="text" name="fullName" value={null}/><br/>
-                        メール<input type="email" name="email" value={null}/><br/>
-                        お問い合わせ内容<br/>
-                        <textarea cols={40} rows={8} name="messaage"/><br />
-                        <input type="submit" name="confirm" value="確認"/>
-                    </form>
+
 
                 </div>
                 <div className="my-20 flex items-center justify-center">
