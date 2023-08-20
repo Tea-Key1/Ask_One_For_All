@@ -26,7 +26,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
 <body>
     <?php if ($mode == "input") { ?>
-        <form action="api/Contact.php" method="post">
+        <form action="./Contact.php" method="post">
             名前<input type="text" name="fullname" value="<?php echo $_SESSION["fullname"] ?>" /></input><br>
             メール<input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" /></input><br>
             お問い合わせ内容<br>
@@ -34,7 +34,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
             <input type="submit" name="confirm" value="確認" /></input>
         </form>
     <?php } else if ($mode == "confirm") { ?>
-            <form action="api/Contact.php" method="post">
+            <form action="./Contact.php" method="post">
                 名前
             <?php echo $_SESSION["fullname"] ?><br>
                 メール
