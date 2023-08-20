@@ -9,6 +9,16 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     $_SESSION["message"] = $_POST["message"];
     $mode = "confirm";
 } else if (isset($_POST["send"]) && $_POST["send"]) {
+    $message = "お問い合わせを受け付けました。\r\n"
+    ."名前".$_SESSION["fullname"]."\r\n"
+    ."メールアドレス".$_SESSION["email"]."\r\n"
+    ."お問い合わせ内容"."\r\n"
+    .preg_replace("/\r\n|\r\n/", "\r\n", $_SESSION["message"]);
+    mail(to: $_SESSION["email"], subject: "お問い合わせ", message: $message);
+    mail(to: "askone40@gmail.com", subject: "お問い合わせ", message: $message);    
+    $_SESSION["fullname"] = "";
+    $_SESSION["email"] = "";
+    $_SESSION["message"] = "";
     $mode = "send";
 } else {
     $_SESSION["fullname"] = "";
@@ -47,6 +57,10 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                 <input type="submit" name="send" value="送信"></input>
             </form>
     <?php } else { ?>
+        お問い合わせありがとうございます。お問い合わせ内容と共にメッセージを送信いたします。
+        <a href="/" className="flex items-center">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap">Ask One</span>
+        </a>
     <?php } ?>
 </body>
 
