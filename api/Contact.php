@@ -11,7 +11,9 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 } else if (isset($_POST["send"]) && $_POST["send"]) {
     $mode = "send";
 } else {
-    $_SESSION = array();
+    $_SESSION["fullname"] = "";
+    $_SESSION["email"] = "";
+    $_SESSION["message"] = "";
 }
 ?>
 
