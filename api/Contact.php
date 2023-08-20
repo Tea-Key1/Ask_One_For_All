@@ -14,8 +14,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     ."メールアドレス".$_SESSION["email"]."\r\n"
     ."お問い合わせ内容"."\r\n"
     .preg_replace("/\r\n|\r\n/", "\r\n", $_SESSION["message"]);
-    mail(to: $_SESSION["email"], subject: "お問い合わせ", message: $message);
-    mail(to: "askone40@gmail.com", subject: "お問い合わせ", message: $message);    
+    mail($_SESSION["email"], "お問い合わせ", $message);
+    mail("askone40@gmail.com", "お問い合わせ", $message);    
     $_SESSION["fullname"] = "";
     $_SESSION["email"] = "";
     $_SESSION["message"] = "";
@@ -39,10 +39,10 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 <body>
     <?php if ($mode == "input") { ?>
         <form action="./Contact.php" method="post">
-            名前<input type="text" name="fullname" value="<?php echo $_SESSION["fullname"] ?>"></input><br>
-            メール<input type="email" name="email" value="<?php echo $_SESSION["email"] ?>"></input><br>
+            名前<input type="text" name="fullname" required value="<?php echo $_SESSION["fullname"] ?>"></input><br>
+            メール<input type="email" name="email" required value="<?php echo $_SESSION["email"] ?>"></input><br>
             お問い合わせ内容<br>
-            <textarea cols="40" rows="8" name="message"><?php echo $_SESSION["message"] ?></textarea><br>
+            <textarea cols="40" rows="8" required name="message"><?php echo $_SESSION["message"] ?></textarea><br>
             <input type="submit" name="confirm" value="確認"></input>
         </form>
     <?php } else if ($mode == "confirm") { ?>
