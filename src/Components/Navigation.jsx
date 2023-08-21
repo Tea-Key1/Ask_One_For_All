@@ -30,7 +30,8 @@ export default function Navigation(props){
                     <li><SectionButton label="ホーム" onClick={() => setSection(0)} /></li>
                     <li><SectionButton label="サービス" onClick={() => setSection(1)} /></li>
                     <li><SectionButton label="実績" onClick={() => setSection(2)} /></li>
-                    <li><a href="/documents/document.pdf" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" download>資料請求</a></li>
+                    <li><SectionButton label="組織概要" onClick={() => setSection(3)} /></li>
+                    <li><a href="/document" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">資料請求</a></li>
                 </ul>
             </div>
         </div>
