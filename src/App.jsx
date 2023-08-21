@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Question from "./Components/Question";
 import Privacy from "./Components/Privacy";
-import Contact from "./Components/Contact"
+import About from "./Components/About"
 
 export default function App(){
     return(
@@ -12,7 +12,7 @@ export default function App(){
                     <Route exact path="/" Component={Home}/>
                     <Route path="/question" Component={Question}/>
                     <Route path="/privacy" Component={Privacy}/>
-                    <Route path="/contact" Component={Contact}/>
+                    <Route path="/about" Component={About}/>
                 </Routes>
             </BrowserRouter>
         </>
