@@ -11,8 +11,9 @@ import img from "/textures/flower.jpg";
 
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
-  { uColor: new THREE.Color(0.5, 0.5, 0.5),
-    uTime : 0,
+  {
+    uColor: new THREE.Color(0.5, 0.5, 0.5),
+    uTime: 0,
     uTexture: new THREE.TextureLoader().load(img)
   },
   // VertexShader
@@ -170,6 +171,7 @@ function Pointer() {
 function Animal() {
   const vec = new THREE.Vector3()
   const api = useRef(null);
+  const { width, height } = useThree((state) => state.viewport)
   const Animal = useGLTF("/models/Balloon_01.glb")
 
   useFrame((state, delta) => {
@@ -185,13 +187,32 @@ function Animal() {
   })
 
   return (
-    <RigidBody mass={0.1} linearDamping={3} angularDamping={1} friction={0} position={[-10, -5, 0]} ref={api} colliders={false} dispose={null} restitution={0}>
-      <BallCollider args={[1]} />
-      <CylinderCollider rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 1.2]} args={[0.15, 0.27]} />
-      <group>
-        <primitive object={Animal.scene} scale={0.6} rotation={[0, Math.PI / 4, 0]} />
-      </group>
-    </RigidBody>
+    <>
+      <RigidBody mass={0.1} linearDamping={3} angularDamping={1} friction={0} position={[-10, -5, 0]} ref={api} colliders={false} dispose={null} restitution={0}>
+        <BallCollider args={[1]} />
+        <CylinderCollider rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 1.2]} args={[0.15, 0.27]} />
+        <group>
+          <primitive object={Animal.scene} scale={0.6} rotation={[0, Math.PI / 4, 0]} />
+        </group>
+      </RigidBody>
+
+      <Text
+        scale={Math.min((width / 5), 3)}
+        position={[0, Math.min(((width / 9) + 4), 5), -15]}
+        font="\fonts\Merriweather-Black.ttf"
+      >
+        First step is
+        <meshBasicMaterial color={"#2B2730"} toneMapped={false} />
+      </Text>
+      <Text
+        scale={Math.min((width / 5), 3)}
+        position={[0, (-width / 9) + 4, -15]}
+        font="\fonts\Merriweather-Black.ttf"
+      >
+        difficult to start.
+        <meshBasicMaterial color={"#2B2730"} toneMapped={false} />
+      </Text>
+    </>
   )
 }
 
@@ -200,8 +221,7 @@ function PC(props) {
   const { width } = props
   const animations = useAnimations(pc.animations, pc.scene)
 
-  useEffect(()=>{
-    console.log(animations.actions, animations.actions.keyAction001,animations.actions.textAction002)
+  useEffect(() => {
     animations.actions.enterAction.play()
     animations.actions.mouseAction.play()
     animations.actions.keyAction001.play()
@@ -229,7 +249,7 @@ function PC(props) {
     animations.actions.textAction011.play()
     animations.actions.textAction012.play()
     animations.actions.textAction013.play()
-  },[])
+  }, [])
 
   return (<>
     <group >
@@ -244,10 +264,15 @@ function PC(props) {
   </>)
 }
 
-function Bottle(props) {
-
+function Service(props) {
+  // const { width, height } = useThree((state) => state.viewport)
+  // const waveRef = useRef()
+  // useFrame(({clock})=>(waveRef.current.uTime=clock.getElapsedTime()))
   return (<>
-
+      {/* <mesh position={[-6,-20,-5]}>
+        <planeGeometry args={[width*0.5,height*0.5,16,16]}/>
+        <waveShaderMaterial ref={waveRef} uColor={"hotpink"} uTime transparent/>
+      </mesh> */}
   </>)
 }
 
@@ -255,9 +280,7 @@ function Bottle(props) {
 
 export default function Experience() {
   const { width, height } = useThree((state) => state.viewport)
-  const waveRef = useRef()
 
-  // useFrame(({clock})=>(waveRef.current.uTime=clock.getElapsedTime()))
 
   return (
     <>
@@ -268,30 +291,8 @@ export default function Experience() {
       </Physics>
 
       <PC width={width} />
-      <Bottle width={width} />
+      <Service width={width} />
 
-
-      <Text
-        scale={Math.min((width / 5), 3)}
-        position={[0, Math.min(((width / 9) + 4), 5), -15]}
-        font="\fonts\Merriweather-Black.ttf"
-      >
-        First step is
-        <meshBasicMaterial color={"#2B2730"} toneMapped={false} />
-      </Text>
-      <Text
-        scale={Math.min((width / 5), 3)}
-        position={[0, (-width / 9) + 4, -15]}
-        font="\fonts\Merriweather-Black.ttf"
-      >
-        difficult to start.
-        <meshBasicMaterial color={"#2B2730"} toneMapped={false} />
-      </Text>
-
-      {/* <mesh position={[-6,-20,-5]}>
-        <planeGeometry args={[width*0.5,height*0.5,16,16]}/>
-        <waveShaderMaterial ref={waveRef} uColor={"hotpink"} uTime transparent/>
-      </mesh> */}
     </>
   )
 }
