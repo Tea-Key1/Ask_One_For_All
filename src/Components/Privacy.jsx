@@ -15,10 +15,10 @@ export default function Privacy() {
 
                 <div className="my-20 mx-20">
 
-                    <p className="text-gray-500">
+                    <p className="">
                         Ask One(以下、「当組織」という。)は，ユーザーの個人情報について以下のとおりプライバシーポリシー（以下、「本ポリシー」という。）を定めます。本ポリシーは、当社がどのような個人情報を取得し、どのように利用・共有するか、ユーザーがどのようにご自身の個人情報を管理できるかをご説明するものです。
                     </p>
-                    <p className="text-gray-500">
+                    <p className="">
 
                         <strong>【1.事業者情報】</strong><br />
                         組織名:Ask One<br />
@@ -61,12 +61,12 @@ export default function Privacy() {
                     </p>
                 </div>
 
-                <div className="my-20 flex items-center justify-center">
-                    <Link to="/">
-                        <button className="px-5 py-4 text-base font-bold text-center transition duration-500 ease-in-out transform bg-white lg:px-10 rounded-xl hover:bg-blue-400 hover:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-                            ホームに戻る
-                        </button>
-                    </Link>
+                <div className="my-10 flex items-center justify-center">
+                <Link to="/">
+            <button className="px-5 py-4 text-base font-bold text-center lg:px-10 rounded-xl border-t-2 border-gray-700 shadow hover:bg-bg-pink-thin hover:text-gray-500 transition duration-500">
+              ホームに戻る
+            </button>
+          </Link>
                 </div>
             </div>
         </motion.div>

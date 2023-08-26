@@ -9,11 +9,11 @@ import Navigation from "./Navigation.jsx";
 
 export default function Home() {
     const [section, setSection] = useState(0);
-    // const [menuOpened, setMenuOpened] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
 
     return (
         <>
-            <Navigation setSection={setSection}/>
+            <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <Canvas
                 className="Canvas"
                 shadows
@@ -29,7 +29,7 @@ export default function Home() {
                     </Html>
                 }>
                     <ambientLight intensity={1} />
-                    <ScrollControls pages={4} damping={0.3}>
+                    <ScrollControls pages={6} damping={0.5}>
                         <ScrollManager section={section} onSectionChange={setSection} />
                         <Scroll>
                             <Experience />
