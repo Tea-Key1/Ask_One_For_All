@@ -349,7 +349,7 @@ const Cost = () => {
 
                       <hr className="border-gray-200 dark:border-gray-700" />
 
-                      <div class="p-6">
+                      <div className="p-6">
                         <h1 className="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">What’s included:</h1>
 
                         <div className="mt-8 space-y-4">
@@ -414,7 +414,7 @@ const Cost = () => {
 
                         <h2 className="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">$50.00 <span className="text-base font-medium">/life time</span></h2>
 
-                        <p class="mt-1 text-gray-500 dark:text-gray-300">
+                        <p className="mt-1 text-gray-500 dark:text-gray-300">
                           One time payment
                         </p>
 

@@ -18,7 +18,7 @@ body,
     /* フォントの色を設定 */
     /* background-color: black; */
     background-image: linear-gradient(0deg, #EDBBD840 0%, #FFE7E210 10%);
-    overflow:hidden;
+    overflow-x: hidden;
 }
 
 body {
