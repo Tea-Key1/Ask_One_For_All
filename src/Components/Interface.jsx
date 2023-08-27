@@ -494,9 +494,9 @@ const Cost = () => {
 const FooterSection = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen p-10 max-auto flex flex-col align-middle items-center justify-end">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
 
-      <div className="w-full h-full flex flex-col align-middle items-center  justify-center">
+      <div className="flex flex-col align-middle items-center justify-center">
 
         <div className="max-w-2xl shadow shadow-gray-400 sm:rounded-lg bg-white">
           <div className="px-4 py-5 sm:px-6">
@@ -573,7 +573,7 @@ const FooterSection = () => {
                 <a className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">askone40@gmai.com</a>
               </p>
               <span className="inline-flex ml-2">
-                <a href="https://twitter.com/Ask_One_For_All" className="text-gray-500">
+                <a href="https://twitter.com/Ask_One_For_All">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                   </svg>
