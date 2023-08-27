@@ -5,16 +5,18 @@ import { extend, useFrame, useLoader, useThree } from "@react-three/fiber";
 import * as THREE from "three"
 import { shaderMaterial } from "@react-three/drei";
 import glsl from "glslify";
-
-import img from "/textures/flower.jpg";
-
+import img1 from "/textures/document.jpg";
+import img2 from "/textures/Picture.jpg";
+import img3 from "/textures/flower.jpg";
+import img4 from "/textures/pexels-monstera-6289025.jpg"
+import { MeshStandardMaterial } from "three";
 
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
     uColor: new THREE.Color(0.5, 0.5, 0.5),
     uTime: 0,
-    uTexture: new THREE.TextureLoader().load(img)
+    uTexture: new THREE.TextureLoader().load(img4)
   },
   // VertexShader
   glsl`
@@ -117,8 +119,8 @@ void main() {
   vUv = uv;
 
   vec3 pos = position;
-  float noiseFreq = 1.5;
-  float noiseAmp = 0.15; 
+  float noiseFreq = 0.1;
+  float noiseAmp = 0.5; 
   vec3 noisePos = vec3(pos.x * noiseFreq + uTime, pos.y, pos.z);
   pos.z += snoise(noisePos) * noiseAmp;
 
@@ -134,7 +136,7 @@ void main() {
 
     void main() {
       vec3 texture = texture2D(uTexture, vUv).rgb;
-      gl_FragColor = vec4(texture, 0.4);
+      gl_FragColor = vec4(texture, 1);
     }
   `
 )
@@ -264,23 +266,59 @@ function PC(props) {
   </>)
 }
 
-function Service(props) {
-  // const { width, height } = useThree((state) => state.viewport)
-  // const waveRef = useRef()
-  // useFrame(({clock})=>(waveRef.current.uTime=clock.getElapsedTime()))
+function Wave(props) {
+  const { width, height } = useThree((state) => state.viewport)
+  const waveRef = useRef()
+  useFrame(({ clock }) => (waveRef.current.uTime = clock.getElapsedTime()))
   return (<>
-      {/* <mesh position={[-6,-20,-5]}>
-        <planeGeometry args={[width*0.5,height*0.5,16,16]}/>
-        <waveShaderMaterial ref={waveRef} uColor={"hotpink"} uTime transparent/>
-      </mesh> */}
+    <mesh position={[4, -30, 0]}>
+      <planeGeometry args={[Math.min(4, width * 0.4), Math.min(4, height * 0.4), 32, 32]} />
+      <waveShaderMaterial ref={waveRef} uColor={"hotpink"} uTime />
+    </mesh>
   </>)
 }
 
-
+function Bottle(props) {
+  const bottle = useGLTF("/models/bottle_sample_01.glb")
+  const { width } = props
+  const bottleRef = useRef()
+  useFrame((clock, delta) => {
+    bottleRef.current.rotation.y += delta * 0.5
+  })
+  useEffect(() => {
+    if (width < 17) {
+      bottleRef.current.position.set(0, -30, 0);
+    } else {
+      bottleRef.current.position.set(0.2 * width, -33, 0);
+    }
+  }, [])
+  useEffect(() => {
+    if (width < 17) {
+      bottleRef.current.position.set(0, -30, 0);
+    } else {
+      bottleRef.current.position.set(0.2 * width, -33, 0);
+    }
+  }, [width]);
+  return (<>
+    <group>
+      {/* <primitive ref={bottleRef} object={bottle.nodes.Scene} scale={Math.min(2, 0.15 * width)} position={[0.2 * width, -31, 0]} rotation={[0.3, 0, 0]}/> */}
+    </group>
+    <group ref={bottleRef} scale={Math.min(2, 0.15 * width)} position = {[0.2 * width, -33, 0]} rotation={[0.3, 0, 0]}>
+      <mesh geometry={bottle.nodes.Scene.children[0].geometry}>
+        <meshStandardMaterial color={"#aaaaaa"} transparent opacity={0.5}/>
+      </mesh>
+      <mesh geometry={bottle.nodes.Scene.children[1].geometry}>
+        <meshPhysicalMaterial color={"#987654"} metalness={0.5} roughness={0.3}/>
+      </mesh>
+      <mesh geometry={bottle.nodes.Scene.children[2].geometry}>
+        <meshStandardMaterial color={"#000000"}/>
+      </mesh>
+    </group>
+  </>)
+}
 
 export default function Experience() {
   const { width, height } = useThree((state) => state.viewport)
-
 
   return (
     <>
@@ -291,7 +329,9 @@ export default function Experience() {
       </Physics>
 
       <PC width={width} />
-      <Service width={width} />
+      <Bottle width={width} />
+
+      {/* <Wave width={width} /> */}
 
     </>
   )

@@ -35,7 +35,7 @@ export default function Home() {
                             <Experience />
                         </Scroll>
                         <Scroll html>
-                            <Interface />
+                            <Interface html/>
                         </Scroll>
                     </ScrollControls>
                     <Environment preset="city" />
