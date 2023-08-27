@@ -250,7 +250,7 @@ const Cost = () => {
   return (<>
     {
       width <= 15 ?
-      <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
+      <section className="h-auto w-auto px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
         <div className="bg-white dark:bg-gray-900">
           <div className="container px-6 py-8 mx-auto">
             <p className="text-xl text-center text-gray-500 dark:text-gray-300">
