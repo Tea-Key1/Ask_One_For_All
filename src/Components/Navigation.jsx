@@ -68,7 +68,7 @@ export default function Navigation(props) {
 
             {width <= 768 && (
                 <motion.div
-                    className="absolute right-5 top-20 w-40 z-20 rounded-md shadow-xl md:hidden"
+                    className="absolute right-5 top-20 w-40 z-20 rounded-md shadow-xl md:hidden bg-white"
                     ref={menuRef}
                     initial={{
                         x: 50,
@@ -83,7 +83,7 @@ export default function Navigation(props) {
                     <a onClick={() => { setSection(3); setMenuOpen(!menuOpen) }} className="block px-4 py-3">プロセス</a>
                     <a onClick={() => { setSection(4); setMenuOpen(!menuOpen) }} className="block px-4 py-3">費用</a>
                     <a onClick={() => { setSection(5); setMenuOpen(!menuOpen) }} className="block px-4 py-3">組織概要</a>
-                    <a href="/document" className="block bg-local px-4 py-3"> 資料請求 </a>
+                    <a href="/document" className="block border-t-2 border-blue-100 px-4 py-3"> 資料請求 </a>
                 </motion.div>
             )}
         </>
