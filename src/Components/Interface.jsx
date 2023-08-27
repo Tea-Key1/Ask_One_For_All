@@ -24,7 +24,6 @@ export default function Interface() {
         <Service />
         <Process />
         <Cost />
-
         <FooterSection />
       </div>
     </>
@@ -178,67 +177,67 @@ function Process() {
   const { width, height } = useThree((state) => state.viewport)
   return (
     <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap">
-          <div class="flex flex-wrap w-full">
-            <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-              <div class="flex relative pb-12">
-                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+          <div className="flex flex-wrap w-full">
+            <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+              <div className="flex relative pb-12">
+                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
-                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
                 </div>
-                <div class="flex-grow pl-4">
-                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 1</h2>
-                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                <div className="flex-grow pl-4">
+                  <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 1</h2>
+                  <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                 </div>
               </div>
-              <div class="flex relative pb-12">
-                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              <div className="flex relative pb-12">
+                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
-                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                 </div>
-                <div class="flex-grow pl-4">
-                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 2</h2>
-                  <p class="leading-relaxed">Vice migas literally kitsch +1 pok pok. Truffaut hot chicken slow-carb health goth, vape typewriter.</p>
+                <div className="flex-grow pl-4">
+                  <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 2</h2>
+                  <p className="leading-relaxed">Vice migas literally kitsch +1 pok pok. Truffaut hot chicken slow-carb health goth, vape typewriter.</p>
                 </div>
               </div>
-              <div class="flex relative pb-12">
-                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              <div className="flex relative pb-12">
+                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
-                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <circle cx="12" cy="5" r="3"></circle>
                     <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
                   </svg>
                 </div>
-                <div class="flex-grow pl-4">
-                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 3</h2>
-                  <p class="leading-relaxed">Coloring book nar whal glossier master cleanse umami. Salvia +1 master cleanse blog taiyaki.</p>
+                <div className="flex-grow pl-4">
+                  <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 3</h2>
+                  <p className="leading-relaxed">Coloring book nar whal glossier master cleanse umami. Salvia +1 master cleanse blog taiyaki.</p>
                 </div>
               </div>
-              <div class="flex relative pb-12">
-                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <div className="flex relative pb-12">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
                 </div>
-                <div class="flex-grow pl-4">
-                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 4</h2>
-                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                <div className="flex-grow pl-4">
+                  <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 4</h2>
+                  <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                 </div>
               </div>
             </div>
-            {width >= 12 ? <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://dummyimage.com/1200x500" alt="step" /> : null}
+            {width >= 12 ? <img className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://dummyimage.com/1200x500" alt="step" /> : null}
           </div>
         </div>
       </section>
@@ -252,69 +251,69 @@ const Cost = () => {
     {
       width <= 15 ?
       <section className="h-auto w-auto px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
-        <div class="bg-white dark:bg-gray-900">
-          <div class="container px-6 py-8 mx-auto">
-            <p class="text-xl text-center text-gray-500 dark:text-gray-300">
+        <div className="bg-white dark:bg-gray-900">
+          <div className="container px-6 py-8 mx-auto">
+            <p className="text-xl text-center text-gray-500 dark:text-gray-300">
               Choose your plan
             </p>
 
-            <h1 class="mt-4 text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Pricing Plan</h1>
+            <h1 className="mt-4 text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Pricing Plan</h1>
 
-            <div class="mt-6 space-y-8 xl:mt-12">
-              <div class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
-                <div class="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+            <div className="mt-6 space-y-8 xl:mt-12">
+              <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
+                <div className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
 
-                  <div class="flex flex-col items-center mx-5 space-y-1">
-                    <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Basic</h2>
+                  <div className="flex flex-col items-center mx-5 space-y-1">
+                    <h2 className="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Basic</h2>
 
-                    <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+                    <div className="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
                       Save 20%
                     </div>
                   </div>
                 </div>
 
-                <h2 class="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$49 <span class="text-base font-medium">/Month</span></h2>
+                <h2 className="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$49 <span className="text-base font-medium">/Month</span></h2>
               </div>
 
-              <div class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-blue-500 cursor-pointer rounded-xl">
-                <div class="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+              <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-blue-500 cursor-pointer rounded-xl">
+                <div className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-600 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
 
-                  <div class="flex flex-col items-center mx-5 space-y-1">
-                    <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Popular</h2>
-                    <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+                  <div className="flex flex-col items-center mx-5 space-y-1">
+                    <h2 className="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Popular</h2>
+                    <div className="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
                       Save 20%
                     </div>
                   </div>
                 </div>
 
-                <h2 class="text-2xl font-semibold text-blue-600 sm:text-4xl">$99 <span class="text-base font-medium">/Month</span></h2>
+                <h2 className="text-2xl font-semibold text-blue-600 sm:text-4xl">$99 <span className="text-base font-medium">/Month</span></h2>
               </div>
 
-              <div class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
-                <div class="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+              <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
+                <div className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
 
-                  <div class="flex flex-col items-center mx-5 space-y-1">
-                    <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Enterprise</h2>
-                    <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+                  <div className="flex flex-col items-center mx-5 space-y-1">
+                    <h2 className="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Enterprise</h2>
+                    <div className="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
                       Save 20%
                     </div>
                   </div>
                 </div>
 
-                <h2 class="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$149 <span class="text-base font-medium">/Month</span></h2>
+                <h2 className="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$149 <span className="text-base font-medium">/Month</span></h2>
               </div>
 
-              <div class="flex justify-center">
-                <button class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+              <div className="flex justify-center">
+                <button className="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                   Choose Plan
                 </button>
               </div>
@@ -324,177 +323,177 @@ const Cost = () => {
       </section>
       :
       <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
-        <div class="bg-white dark:bg-gray-900">
-          <div class="container px-6 py-8 mx-auto">
-            <div class="xl:items-center xl:-mx-8 xl:flex">
-              <div class="flex flex-col items-center xl:items-start xl:mx-8">
-                <h1 class="text-2xl font-medium text-gray-800 capitalize lg:text-3xl dark:text-white">Our Pricing Plan</h1>
+        <div className="bg-white dark:bg-gray-900">
+          <div className="container px-6 py-8 mx-auto">
+            <div className="xl:items-center xl:-mx-8 xl:flex">
+              <div className="flex flex-col items-center xl:items-start xl:mx-8">
+                <h1 className="text-2xl font-medium text-gray-800 capitalize lg:text-3xl dark:text-white">Our Pricing Plan</h1>
 
-                <div class="mt-4">
-                  <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
-                  <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
-                  <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+                <div className="mt-4">
+                  <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                  <span className="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+                  <span className="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
                 </div>
 
-                <p class="mt-4 font-medium text-gray-500 dark:text-gray-300">
+                <p className="mt-4 font-medium text-gray-500 dark:text-gray-300">
                   You can get All Access by selecting your plan!
                 </p>
 
-                <a href="#" class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                  <span class="mx-1">read more</span>
-                  <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <a href="#" className="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  <span className="mx-1">read more</span>
+                  <svg className="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
               </div>
 
-              <div class="flex-1 xl:mx-8">
-                <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                  <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
-                    <div class="p-6">
-                      <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Essential</h1>
+              <div className="flex-1 xl:mx-8">
+                <div className="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
+                  <div className="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                    <div className="p-6">
+                      <h1 className="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Essential</h1>
 
-                      <p class="mt-4 text-gray-500 dark:text-gray-300">
+                      <p className="mt-4 text-gray-500 dark:text-gray-300">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
                       </p>
 
-                      <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">$3.00 <span class="text-base font-medium">/Month</span></h2>
+                      <h2 className="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">$3.00 <span className="text-base font-medium">/Month</span></h2>
 
-                      <p class="mt-1 text-gray-500 dark:text-gray-300">
+                      <p className="mt-1 text-gray-500 dark:text-gray-300">
                         Yearly payment
                       </p>
 
-                      <button class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                      <button className="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                         Start Now
                       </button>
                     </div>
 
-                    <hr class="border-gray-200 dark:border-gray-700" />
+                    <hr className="border-gray-200 dark:border-gray-700" />
 
                     <div class="p-6">
-                      <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">What’s included:</h1>
+                      <h1 className="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">What’s included:</h1>
 
-                      <div class="mt-8 space-y-4">
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                      <div className="mt-8 space-y-4">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">All limited links</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">All limited links</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Own analytics platform</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Own analytics platform</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Chat support</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Chat support</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Optimize hashtags</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Optimize hashtags</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
-                    <div class="p-6">
-                      <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Premium</h1>
+                  <div className="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                    <div className="p-6">
+                      <h1 className="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Premium</h1>
 
-                      <p class="mt-4 text-gray-500 dark:text-gray-300">
+                      <p className="mt-4 text-gray-500 dark:text-gray-300">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
                       </p>
 
-                      <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">$50.00 <span class="text-base font-medium">/life time</span></h2>
+                      <h2 className="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">$50.00 <span className="text-base font-medium">/life time</span></h2>
 
                       <p class="mt-1 text-gray-500 dark:text-gray-300">
                         One time payment
                       </p>
 
-                      <button class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                      <button className="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                         Start Now
                       </button>
                     </div>
 
-                    <hr class="border-gray-200 dark:border-gray-700" />
+                    <hr className="border-gray-200 dark:border-gray-700" />
 
-                    <div class="p-6">
-                      <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">What’s included:</h1>
+                    <div className="p-6">
+                      <h1 className="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">What’s included:</h1>
 
-                      <div class="mt-8 space-y-4">
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                      <div className="mt-8 space-y-4">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">All limited links</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">All limited links</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Own analytics platform</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Own analytics platform</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Chat support</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Chat support</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Optimize hashtags</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Optimize hashtags</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
                         </div>
 
-                        <div class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                           </svg>
 
-                          <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                          <span className="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
                         </div>
                       </div>
                     </div>
