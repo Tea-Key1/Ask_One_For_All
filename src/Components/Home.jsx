@@ -23,7 +23,7 @@ export default function Home() {
             >
                 <Suspense fallback={
                     <Html center>
-                        <div className="absolute flex flex-col items-center justify-center text-center whitespace-nowrap">
+                        <div className="flex flex-col items-center justify-center text-center whitespace-nowrap">
                             <ReactTyped className="w-auto font-bold md:text-5xl sm:text-4xl text-xl" strings={["Loading", "読み込み中"]} typeSpeed={40} backSpeed={40} loop />
                             <div className="animate-spin inline-block w-10 h-10 border-[3px] border-current border-t-transparent rounded-full" role="status" aria-label="loading" style={{ color: "#2B2730" }} />
                         </div>

@@ -80,7 +80,7 @@ const Introduction = () => {
 
 
       <div className="h-70% w-full flex flex-col bg-white rounded-2xl body-font container justify-around px-5 mt-5 py-24 mx-auto">
-        <div className="flex items-center lg:w-80% mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div className="flex items-center lg:w-80% mx-auto border-b pb-10 border-gray-200 sm:flex-row flex-col">
 
           <motion.div className="flex-grow sm:text-left text-start mt-6 sm:mt-0"
             initial={{
@@ -250,7 +250,7 @@ const Cost = () => {
   return (<>
     {
       width <= 15 ?
-      <section className="h-auto w-auto px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
+      <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
         <div className="bg-white dark:bg-gray-900">
           <div className="container px-6 py-8 mx-auto">
             <p className="text-xl text-center text-gray-500 dark:text-gray-300">
