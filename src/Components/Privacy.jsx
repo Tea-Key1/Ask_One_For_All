@@ -15,10 +15,10 @@ export default function Privacy() {
 
                 <div className="my-20 mx-20">
 
-                    <p className="">
+                    <p className="text-sm">
                         Ask One(以下、「当組織」という。)は，ユーザーの個人情報について以下のとおりプライバシーポリシー（以下、「本ポリシー」という。）を定めます。本ポリシーは、当社がどのような個人情報を取得し、どのように利用・共有するか、ユーザーがどのようにご自身の個人情報を管理できるかをご説明するものです。
                     </p>
-                    <p className="">
+                    <p className="text-sm">
 
                         <strong>【1.事業者情報】</strong><br />
                         組織名:Ask One<br />
