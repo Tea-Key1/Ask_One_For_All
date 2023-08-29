@@ -183,7 +183,7 @@ function Process() {
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 inline-flex items-center justify-center relative z-10">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center relative z-10">
               <img src="/textures/step01.svg" />
             </div>
             <div className="flex-grow pl-4">
@@ -195,7 +195,7 @@ function Process() {
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
               <img src="/textures/step02.svg" />
             </div>
             <div className="flex-grow pl-4">
@@ -207,7 +207,7 @@ function Process() {
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
               <img src="/textures/step03.svg" />
             </div>
             <div className="flex-grow pl-4">
@@ -216,7 +216,7 @@ function Process() {
             </div>
           </div>
           <div className="flex relative pb-12">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
               <img src="/textures/step04.svg" />
             </div>
             <div className="flex-grow pl-4">
@@ -256,7 +256,7 @@ const Cost = () => {
   return (<>
     {
       width <= 15 ?
-        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
+        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
           <div className="bg-white text-text-brown-original">
             <div className="container px-6 py-8 mx-auto">
               <p className="text-xl text-center ">
@@ -309,7 +309,7 @@ const Cost = () => {
           </div>
         </section>
         :
-        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
+        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
           <div className="bg-white">
             <div className="container px-6 py-8 mx-auto">
               <div className="xl:items-center xl:-mx-8 xl:flex">
@@ -435,7 +435,7 @@ const Cost = () => {
 const About = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around border-2 border-teal-500">
 
       <div className="flex flex-col align-middle items-center justify-center">
 
