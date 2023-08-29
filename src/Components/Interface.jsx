@@ -447,7 +447,7 @@ const About = () => {
           </div>
           <div className="border-t border-gray-300">
             <dl>
-              <div className="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <div className="px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
                   組織名
                 </dt>
@@ -455,7 +455,7 @@ const About = () => {
                   Ask One
                 </dd>
               </div>
-              <div className=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <div className=" px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
                   代表者
                 </dt>
@@ -463,7 +463,7 @@ const About = () => {
                   柳田大記
                 </dd>
               </div>
-              <div className="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <div className="px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
                   メールアドレス
                 </dt>
@@ -471,7 +471,7 @@ const About = () => {
                   askone40@gmail.com
                 </dd>
               </div>
-              <div className=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <div className=" px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
                   事業内容
                 </dt>
@@ -479,7 +479,7 @@ const About = () => {
                   Webサイト制作・運用保守/3Dモデル制作
                 </dd>
               </div>
-              <div className="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <div className="px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
                   所在地
                 </dt>
