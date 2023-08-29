@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
 
-    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}">
       <div className="h-4/5 w-full" />
       <div className="h-4/5 w-full" />
       <motion.div
@@ -69,7 +69,7 @@ const Home = () => {
 const Introduction = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center border-2 border-teal-500">
       {width >= 11 ?
         (<div className="h-full w-full"></div>) : null}
       <div className="h-full w-full flex flex-col justify-center">
@@ -133,7 +133,7 @@ const Service = (props) => {
 
   return (<>
 
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle border-2 border-teal-500">
       <div className="h-full w-full flex flex-col lg:justify-center justify-end">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:mb-0 mb-10">
           <motion.div
@@ -176,7 +176,7 @@ function Process() {
   const { width, height } = useThree((state) => state.viewport)
 
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row-reverse flex-col relative align-middle border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row-reverse flex-col relative align-middle border-2 border-teal-500">
       <div className="h-full w-full flex flex-col justify-center">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:ml-5 mb-10">
           <div className="flex relative pb-12">
