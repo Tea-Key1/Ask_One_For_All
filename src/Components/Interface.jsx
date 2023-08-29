@@ -32,9 +32,11 @@ export default function Interface() {
 
 const Home = () => {
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-col relative text-center ">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-col relative text-center justify-start">
+      <div className="h-full w-full"/>
+      <div className="h-full w-full"/>
       <motion.div
-        className="absolute inset-0 flex justify-center items-center"
+        className="h-full w-full"
         initial={{
           opacity: 0,
           y: 50,
@@ -47,7 +49,7 @@ const Home = () => {
           duration: 1,
         }}
       >
-        <div className="absolute bottom-1/3 flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <ReactTyped
             className="font-bold md:text-4xl sm:text-3xl text-xl"
             strings={["モデルにタッチ", "touch to a model"]}
@@ -67,7 +69,7 @@ const Home = () => {
         </div>
       </motion.div>
     </section>
-  );
+  )
 }
 
 const Introduction = () => {
