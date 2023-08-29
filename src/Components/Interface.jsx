@@ -1,3 +1,4 @@
+import { useWindowHeight } from "@react-hook/window-size";
 import { useThree } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -31,10 +32,30 @@ export default function Interface() {
 }
 
 const Home = () => {
+  const { width, height } = useThree((state) => state.viewport)
+  useEffect(() => {
+    const outerHeight = window.outerHeight;
+    const innerHeight = window.innerHeight;
+    // const viewHeight = window.viewHeight;
+    console.log(outerHeight)
+    console.log(innerHeight)
+    // console.log(viewHeight)
+  }, [])
+  useEffect(() => {
+    const outerHeight = window.outerHeight;
+    const innerHeight = window.innerHeight;
+    console.log(outerHeight)
+    console.log(innerHeight)
+    console.log(height)
+  }, [outerHeight, innerHeight])
+
+
   return (
-    <section className="h-[90vh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500">
-      <div className="h-4/5 w-full"/>
-      <div className="h-4/5 w-full"/>
+
+    <section className={`${window.innerHeight <= 'h-screen' ? 'h-[90vh]' : 'h-screen'
+      } w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}>
+      <div className="h-4/5 w-full" />
+      <div className="h-4/5 w-full" />
       <motion.div
         className="h-4/5 w-full"
         initial={{
@@ -168,8 +189,8 @@ const Service = () => {
 
 
       </div>
-      {width >= 17 ? <div className="h-full w-full"/> : null}
-      
+      {width >= 17 ? <div className="h-full w-full" /> : null}
+
     </section>
   </>)
 }
