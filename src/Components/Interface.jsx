@@ -19,6 +19,7 @@ export default function Interface() {
   return (
     <>
       <div className="h-auto w-screen flex flex-col items-center border-2 border-teal-500" >
+        <div className="h-10 w-screen fixed border-2 border-red-300 bg-slate-700"/>
         <Home />
         <Introduction />
         <Service />
