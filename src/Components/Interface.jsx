@@ -73,16 +73,14 @@ const Home = () => {
 const Introduction = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-flow relative text-center">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-flow relative align-middle justify-center">
       {width >= 11 ?
         (<div className="h-full w-full"></div>) : null}
-
-
       <div className="h-full w-full flex flex-col justify-center">
-        <div className="h-4/6 w-full flex flex-col bg-white rounded-2xl container justify-around px-5 mt-5 py-24 mx-auto">
-          <div className="flex items-center lg:w-80% mx-auto border-b-2 pb-10 border-amber-800 sm:flex-row flex-col">
+        <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5">
+          <div className="flex items-center mx-auto border-b-2 pb-5 border-amber-800 sm:flex-row flex-col">
 
-            <motion.div className="flex-grow sm:text-left text-start mt-6 sm:mt-0"
+            <motion.div className="flex-grow sm:text-left text-start sm:mt-0"
               initial={{
                 opacity: 0,
                 y: 50,
@@ -97,12 +95,12 @@ const Introduction = () => {
               }}
             >
               <h2 className="mb-4 text-xl font-bold md:mb-6 md:text-xl sm:text-base">3D × ホームページ × Ask One</h2>
-              <p className="md:text-lg lg:leading-10 sm:text-xs ">はじめまして。私たちは、お客様の課題解決とブランド力向上に真摯に向き合う姿勢を持ち、3D技術を駆使したホームページ制作を提供しています。<br /><br />お客様の大切な商品やサービスを、より魅力的に、より効果的に表現し、そして共に成長していくためのお手伝いをさせていただけますか？</p>
+              <p className="md:text-lg lg:leading-10 text-xs">はじめまして。私たちは、お客様の課題解決とブランド力向上に真摯に向き合う姿勢を持ち、3D技術を駆使したホームページ制作を提供しています。<br /><br />お客様の大切な商品やサービスを、より魅力的に、より効果的に表現し、そして共に成長していくためのお手伝いをさせていただけますか？</p>
             </motion.div>
 
           </div>
-          <div className="flex items-center lg:w-80% mx-auto border-b-2 pb-10 border-amber-800 sm:flex-row flex-col">
-            <motion.div className="flex-grow sm:text-left text-start mt-6 sm:mt-0"
+          <div className="flex items-center mx-auto border-b-2 pb-5 border-amber-800 sm:flex-row flex-col">
+            <motion.div className="flex-grow sm:text-left text-start sm:mt-0"
               initial={{
                 opacity: 0,
                 y: 50,
@@ -117,14 +115,14 @@ const Introduction = () => {
               }}
             >
               <h2 className="my-4 text-xl font-bold md:mb-6 md:text-xl sm:text-base">ホームページって難しい？</h2>
-              <p className="md:text-lg lg:leading-10 sm:text-xs">ホームページの制作には、難しさを感じる方もいらっしゃるかもしれません。確かに、SEO、レスポンシブデザインなど、専門的な知識が必要です。日常ではあまり馴染みのない言葉や複雑な概念に触れることもあります。しかし、安心してください。私たちは、分かりやすい言葉で説明し、複雑なプロセスを小さなステップに分けてご案内します。それが、私たちのサービスの特長です。</p>
+              <p className="md:text-lg lg:leading-10 text-xs">ホームページの制作には、難しさを感じる方もいらっしゃるかもしれません。確かに、SEO、レスポンシブデザインなど、専門的な知識が必要です。日常ではあまり馴染みのない言葉や複雑な概念に触れることもあります。しかし、安心してください。私たちは、分かりやすい言葉で説明し、複雑なプロセスを小さなステップに分けてご案内します。それが、私たちのサービスの特長です。</p>
 
             </motion.div>
 
           </div>
 
-
         </div>
+
       </div>
     </section>
   )
@@ -134,36 +132,42 @@ const Service = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (<>
 
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex items-center justify-center">
-      <div className="bg-white h-auto lg:w-1/2 md:w-full lg:px-10 lg:py-6 mt-6 lg:mt-0 rounded-lg lg:self-start md:self-end md:flex md:flex-col-reverse relative bottom-0">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.25,
-            duration: 1,
-          }}>
-          <h2 className="text-sm title-font tracking-widest">Service</h2>
-          <h1 className="text-xl md:text-xl sm:text-base font-bold inline-block mb-4 pb-2 border-b-2 border-amber-800">ホームページ制作・3Dモデル制作</h1>
-          <p className="md:text-lg lg:leading-10 sm:text-xs">ホームページ制作に関わる幅広い業務を担当いたします。企画から始まり、仕様書、デザイン、コーディング、既存Webサイトのリニューアルなど、多岐にわたるニーズに対応します。さらに、必要であれば3Dモデルを組み込んだ斬新なアプローチも行います。<br />私たちは、お客様のサービスや商品を魅力的かつ効果的にご紹介するため、細部にまでこだわり、最高の成果を出すために全力を尽くします。</p>
-          <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-            <div className="flex">
-              <span className="mr-3">Color</span>
-              <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" />
-              <button className="border-2 border-gray-300 ml-1 bg-cyan-400 rounded-full w-6 h-6 focus:outline-none" />
-              <button className="border-2 border-gray-300 ml-1 bg-amber-400 rounded-full w-6 h-6 focus:outline-none" />
-              <button className="border-2 border-gray-300 ml-1 bg-pink-400 rounded-full w-6 h-6 focus:outline-none" />
-            </div>
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle ">
+      <div className="h-full w-full flex flex-col md:justify-center justify-end">
+        <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:mb-0 mb-10">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.25,
+              duration: 1,
+            }}>
+            <h2 className="text-sm title-font tracking-widest">Service</h2>
+            <h1 className="md:text-xl text-base font-bold inline-block mb-4 pb-2 border-b-2 border-amber-800">ホームページ制作・3Dモデル制作</h1>
+            <p className="md:text-lg lg:leading-10 text-xs">ホームページ制作に関わる幅広い業務を担当いたします。企画から始まり、仕様書、デザイン、コーディング、既存Webサイトのリニューアルなど、多岐にわたるニーズに対応します。さらに、必要であれば3Dモデルを組み込んだ斬新なアプローチも行います。<br />私たちは、お客様のサービスや商品を魅力的かつ効果的にご紹介するため、細部にまでこだわり、最高の成果を出すために全力を尽くします。</p>
+            <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+              <div className="flex">
+                <span className="mr-3">Color</span>
+                <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" />
+                <button className="border-2 border-gray-300 ml-1 bg-cyan-400 rounded-full w-6 h-6 focus:outline-none" />
+                <button className="border-2 border-gray-300 ml-1 bg-amber-400 rounded-full w-6 h-6 focus:outline-none" />
+                <button className="border-2 border-gray-300 ml-1 bg-pink-400 rounded-full w-6 h-6 focus:outline-none" />
+              </div>
 
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+
       </div>
+      {width >= 17 ? <div className="h-full w-full"/> : null}
+      
     </section>
   </>)
 }
