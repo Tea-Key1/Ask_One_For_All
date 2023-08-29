@@ -18,7 +18,7 @@ const Section = (props) => {
 export default function Interface() {
   return (
     <>
-      <div className="flex flex-col items-center w-screen" >
+      <div className="h-auto w-screen flex flex-col items-center border-2 border-teal-500" >
         <Home />
         <Introduction />
         <Service />
@@ -32,7 +32,7 @@ export default function Interface() {
 
 const Home = () => {
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500">
       <div className="h-4/5 w-full"/>
       <div className="h-4/5 w-full"/>
       <motion.div
@@ -75,7 +75,7 @@ const Home = () => {
 const Introduction = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center border-2 border-teal-500">
       {width >= 11 ?
         (<div className="h-full w-full"></div>) : null}
       <div className="h-full w-full flex flex-col justify-center">
@@ -134,7 +134,7 @@ const Service = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (<>
 
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle ">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle border-2 border-teal-500">
       <div className="h-full w-full flex flex-col md:justify-center justify-end">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:mb-0 mb-10">
           <motion.div
@@ -177,7 +177,7 @@ const Service = () => {
 function Process() {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
       <section className="text-text-brown-original body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="flex flex-wrap w-full">
@@ -241,7 +241,7 @@ const Cost = () => {
   return (<>
     {
       width <= 15 ?
-        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
+        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
           <div className="bg-white text-text-brown-original">
             <div className="container px-6 py-8 mx-auto">
               <p className="text-xl text-center ">
@@ -294,7 +294,7 @@ const Cost = () => {
           </div>
         </section>
         :
-        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
+        <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
           <div className="bg-white">
             <div className="container px-6 py-8 mx-auto">
               <div className="xl:items-center xl:-mx-8 xl:flex">
@@ -462,7 +462,7 @@ const Cost = () => {
 const About = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around border-2 border-teal-500">
 
       <div className="flex flex-col align-middle items-center justify-center">
 
