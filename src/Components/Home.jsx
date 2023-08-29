@@ -14,17 +14,14 @@ export default function Home() {
 
     return (
         <>
-
+ <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <Canvas
                 className="Canvas"
                 shadows
                 camera={{ fov: 45, near: 1, far: 100, position: [0, 0, 20] }}
                 onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
             >
-                <Html fullscreen occlude="set">
-                        <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-                </Html>
                 <Suspense fallback={
                     <Html center>
                         <div className="flex flex-col items-center justify-center text-center whitespace-nowrap">
@@ -46,7 +43,7 @@ export default function Home() {
                     <Environment preset="city" />
                 </Suspense>
             </Canvas>
-            {/* <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> */}
+           
         </>
     )
 }
