@@ -10,8 +10,8 @@ import Navigation from "./Navigation.jsx";
 export default function Home() {
     const [section, setSection] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false)
-
-
+    const [bottleColor, setBottleColor] = useState("#ffffff")
+    const bottleColorChange = (newColor)=>{setBottleColor(newColor)}
     return (
         <>
  <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
@@ -34,10 +34,10 @@ export default function Home() {
                     <ScrollControls pages={6} damping={0.3}>
                         <ScrollManager section={section} onSectionChange={setSection} />
                         <Scroll>
-                            <Experience />
+                            <Experience bottleColor={bottleColor}/>
                         </Scroll>
                         <Scroll html>
-                            <Interface html />
+                            <Interface html bottleColorChange={bottleColorChange}/>
                         </Scroll>
                     </ScrollControls>
                     <Environment preset="city" />

@@ -280,7 +280,7 @@ function Wave(props) {
 
 function Bottle(props) {
   const bottle = useGLTF("/models/bottle_sample_01.glb")
-  const { width } = props
+  const { width, bottleColor } = props
   const bottleRef = useRef()
   useFrame((clock, delta) => {
     bottleRef.current.rotation.y += delta * 0.5
@@ -305,7 +305,7 @@ function Bottle(props) {
     </group>
     <group ref={bottleRef} scale={Math.min(2, 0.15 * width)} position = {[0.2 * width, -33, 0]} rotation={[0.3, 0, 0]}>
       <mesh geometry={bottle.nodes.Scene.children[0].geometry}>
-        <meshStandardMaterial color={"#aaaaaa"} transparent opacity={0.5}/>
+        <meshStandardMaterial color={bottleColor} transparent opacity={0.5}/>
       </mesh>
       <mesh geometry={bottle.nodes.Scene.children[1].geometry}>
         <meshPhysicalMaterial color={"#987654"} metalness={0.5} roughness={0.3}/>
@@ -317,8 +317,9 @@ function Bottle(props) {
   </>)
 }
 
-export default function Experience() {
+export default function Experience(props) {
   const { width, height } = useThree((state) => state.viewport)
+  const { bottleColor } = props
 
   return (
     <>
@@ -329,7 +330,7 @@ export default function Experience() {
       </Physics>
 
       <PC width={width} />
-      <Bottle width={width} />
+      <Bottle width={width} bottleColor={bottleColor}/>
 
       {/* <Wave width={width} /> */}
 
