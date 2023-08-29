@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function Document() {
     return (
-        <motion.div className="screen w-screen flex flex-col"
+        <motion.div className="h-auto w-screen flex flex-col"
             initial={{
                 opacity: 0,
             }}

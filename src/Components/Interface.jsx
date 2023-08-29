@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
 
-    <section className="h-[90vh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}">
       <div className="h-4/5 w-full" />
       <div className="h-4/5 w-full" />
       <motion.div

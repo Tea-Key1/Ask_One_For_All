@@ -11,10 +11,10 @@ export default function Home() {
     const [section, setSection] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false)
     const [bottleColor, setBottleColor] = useState("#ffffff")
-    const bottleColorChange = (newColor)=>{setBottleColor(newColor)}
+    const bottleColorChange = (newColor) => { setBottleColor(newColor) }
     return (
         <>
- <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+            <Navigation setSection={setSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Canvas
                 className="Canvas"
                 shadows
@@ -34,16 +34,16 @@ export default function Home() {
                     <ScrollControls pages={6} damping={0.3}>
                         <ScrollManager section={section} onSectionChange={setSection} />
                         <Scroll>
-                            <Experience bottleColor={bottleColor}/>
+                            <Experience bottleColor={bottleColor} />
                         </Scroll>
                         <Scroll html>
-                            <Interface html bottleColorChange={bottleColorChange}/>
+                            <Interface html bottleColorChange={bottleColorChange} />
                         </Scroll>
                     </ScrollControls>
                     <Environment preset="city" />
                 </Suspense>
             </Canvas>
-           
+
         </>
     )
 }

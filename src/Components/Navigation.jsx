@@ -19,7 +19,7 @@ export default function Navigation(props) {
 
     return (
         <>
-            <motion.nav className="absolute w-screen z-10 bg-bg-pink-thin"
+            <motion.nav className="absolute h-auto w-screen z-10 bg-bg-pink-thin"
                 initial={{
                     opacity: 0,
                     y: -50,
