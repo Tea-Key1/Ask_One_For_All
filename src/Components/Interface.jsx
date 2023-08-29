@@ -134,7 +134,7 @@ const Service = (props) => {
   return (<>
 
     <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle border-2 border-teal-500">
-      <div className="h-full w-full flex flex-col md:justify-center justify-end">
+      <div className="h-full w-full flex flex-col lg:justify-center justify-end">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:mb-0 mb-10">
           <motion.div
             initial={{

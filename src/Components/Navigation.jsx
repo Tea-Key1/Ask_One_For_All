@@ -32,7 +32,7 @@ export default function Navigation(props) {
                     duration: 1
                 }}
             >
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-around mx-auto">
                     <a href="/" className="flex items-center py-4 px-3 hover:bg-white hover:text-red-300 hover:translate-y-[-5px] transition duration-500">
                         <img src="/textures/astronauts.svg" className="h-10 w-10 mr-3" />
                         <span className="self-center text-2xl font-semibold ">Ask One</span>
