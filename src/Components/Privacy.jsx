@@ -8,12 +8,12 @@ export default function Privacy() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <div className="mx-auto p-8 max-auto max-w-screen-2xl px-4 md:px-8">
+            <div className="mx-auto p-8 max-auto max-w-screen-2xl md:px-8">
                 <div className="mb-10 md:mb-16">
                     <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">個人情報保護に関する方針</h2>
                 </div>
 
-                <div className="my-20 mx-20">
+                <div className="my-20 sm:mx-20 mx-5">
 
                     <p className="text-sm">
                         Ask One(以下、「当組織」という。)は，ユーザーの個人情報について以下のとおりプライバシーポリシー（以下、「本ポリシー」という。）を定めます。本ポリシーは、当社がどのような個人情報を取得し、どのように利用・共有するか、ユーザーがどのようにご自身の個人情報を管理できるかをご説明するものです。
