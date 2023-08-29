@@ -30,7 +30,7 @@ export default function Home() {
                     </Html>
                 }>
                     <ambientLight intensity={1} />
-                    <ScrollControls pages={6} damping={0.5}>
+                    <ScrollControls pages={6} damping={0.3}>
                         <ScrollManager section={section} onSectionChange={setSection} />
                         <Scroll>
                             <Experience />

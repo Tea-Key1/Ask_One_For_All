@@ -32,11 +32,11 @@ export default function Interface() {
 
 const Home = () => {
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-col relative text-center justify-start">
-      <div className="h-full w-full"/>
-      <div className="h-full w-full"/>
+    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start">
+      <div className="h-4/5 w-full"/>
+      <div className="h-4/5 w-full"/>
       <motion.div
-        className="h-full w-full"
+        className="h-4/5 w-full"
         initial={{
           opacity: 0,
           y: 50,
@@ -75,7 +75,7 @@ const Home = () => {
 const Introduction = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-screen w-screen px-8 max-w-screen-2xl max-auto flex flex-flow relative align-middle justify-center">
+    <section className="h-screen w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center">
       {width >= 11 ?
         (<div className="h-full w-full"></div>) : null}
       <div className="h-full w-full flex flex-col justify-center">
