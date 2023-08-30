@@ -8,7 +8,7 @@ export default function Interface(props) {
   const { bottleColorChange } = props
   return (
     <>
-      <div className="h-auto w-screen flex flex-col items-center border-2 border-teal-500" >
+      <div className="h-auto w-screen flex flex-col items-center" >
         <Home />
         <Introduction />
         <Service bottleColorChange={bottleColorChange} />
@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
 
-    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start border-2 border-teal-500`}">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start">
       <div className="h-4/5 w-full" />
       <div className="h-4/5 w-full" />
       <motion.div
@@ -69,11 +69,12 @@ const Home = () => {
 const Introduction = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-flow relative align-middle justify-center">
       {width >= 11 ?
         (<div className="h-full w-full"></div>) : null}
       <div className="h-full w-full flex flex-col justify-center">
-        <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5">
+        <div className="bg-white h-auto w-full flex flex-col rounded-2xl p-5">
+          <h2 className="text-sm title-font tracking-widest">Introduction</h2>
           <div className="flex items-center mx-auto border-b-2 pb-5 border-amber-800 sm:flex-row flex-col">
 
             <motion.div className="flex-grow sm:text-left text-start sm:mt-0"
@@ -133,7 +134,7 @@ const Service = (props) => {
 
   return (<>
 
-    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row flex-col relative align-middle">
       <div className="h-full w-full flex flex-col lg:justify-center justify-end">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:mb-0 mb-10">
           <motion.div
@@ -176,54 +177,68 @@ function Process() {
   const { width, height } = useThree((state) => state.viewport)
 
   return (
-    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row-reverse flex-col relative align-middle border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto flex md:flex-row-reverse flex-col relative align-middle">
       <div className="h-full w-full flex flex-col justify-center">
         <div className="bg-white h-auto w-full flex flex-col justify-center rounded-2xl p-5 sm:ml-5">
-          <div className="flex relative pb-12">
-            <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-              <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}>
+            <h2 className="text-sm title-font tracking-widest">Flow</h2>
+            <div className="flex relative pb-12 mt-2">
+              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center relative z-10">
+                <img src="/textures/step01.svg" />
+              </div>
+              <div className="flex-grow pl-4">
+                <h2 className="title-font text-sm mb-1 tracking-wider">01 お問い合わせ・ご相談</h2>
+                <p className="text-xs">お問い合わせ内容を下記のメールアドレスより受け付けております。担当者が確認したのち、お打う合せ日程を調整させていただきます。</p>
+              </div>
             </div>
-            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center relative z-10">
-              <img src="/textures/step01.svg" />
+            <div className="flex relative pb-12">
+              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+                <img src="/textures/step02.svg" />
+              </div>
+              <div className="flex-grow pl-4">
+                <h2 className="title-font text-sm mb-1 tracking-wider">02 要件定義・詳細設計</h2>
+                <p className="text-xs">お客様のご要望をしっかりとお伺いし、その後の「制作」に向けたプロセスについてご案内いたします。また、専門的な用語や概念が出てきた場合でも、私たちはその理解を確認しつつ、詳細を詰めます。</p>
+              </div>
             </div>
-            <div className="flex-grow pl-4">
-              <h2 className="title-font text-sm mb-1 tracking-wider">01 お問い合わせ・ご相談</h2>
-              <p className="text-xs">お問い合わせ内容を下記のメールアドレスより受け付けております。担当者が確認したのち、お打う合せ日程を調整させていただきます。</p>
+            <div className="flex relative pb-12">
+              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+                <img src="/textures/step03.svg" />
+              </div>
+              <div className="flex-grow pl-4">
+                <h2 className="title-font text-sm mb-1 tracking-wider">03 制作</h2>
+                <p className="text-xs">ご提示させていただいた金額と内容にご納得いただけましたら、お申込み契約の手続きを進め、制作をスタートさせます。プロジェクトの規模によりますが、ひと月から半年程度の期間がかかることがあります。</p>
+              </div>
             </div>
-          </div>
-          <div className="flex relative pb-12">
-            <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-              <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            <div className="flex relative pb-5">
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
+                <img src="/textures/step04.svg" />
+              </div>
+              <div className="flex-grow pl-4">
+                <h2 className="title-font text-sm mb-1 tracking-wider">04 納品・運用</h2>
+                <p className="text-xs">制作の最終段階においてお客様のご確認をいただきます。すべてのチェックが終了した後、製品を納品させていただきます。</p>
+              </div>
             </div>
-            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
-              <img src="/textures/step02.svg" />
-            </div>
-            <div className="flex-grow pl-4">
-              <h2 className="title-font text-sm mb-1 tracking-wider">02 要件定義・詳細設計</h2>
-              <p className="text-xs">お客様のご要望をしっかりとお伺いし、その後の「制作」に向けたプロセスについてご案内いたします。また、専門的な用語や概念が出てきた場合でも、私たちはその理解を確認しつつ、詳細を詰めます。</p>
-            </div>
-          </div>
-          <div className="flex relative pb-12">
-            <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-              <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-            </div>
-            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
-              <img src="/textures/step03.svg" />
-            </div>
-            <div className="flex-grow pl-4">
-              <h2 className="title-font text-sm mb-1 tracking-wider">03 制作</h2>
-              <p className="text-xs">ご提示させていただいた金額と内容にご納得いただけましたら、お申込み契約の手続きを進め、制作をスタートさせます。プロジェクトの規模によりますが、ひと月から半年程度の期間がかかることがあります。</p>
-            </div>
-          </div>
-          <div className="flex relative pb-5">
-            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pink-100 inline-flex items-center justify-center text-white relative z-10">
-              <img src="/textures/step04.svg" />
-            </div>
-            <div className="flex-grow pl-4">
-              <h2 className="title-font text-sm mb-1 tracking-wider">04 納品・運用</h2>
-              <p className="text-xs">制作の最終段階においてお客様のご確認をいただきます。すべてのチェックが終了した後、製品を納品させていただきます。</p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       {width >= 12 ? (
@@ -256,154 +271,204 @@ const Cost = () => {
   return (<>
     {
       width <= 15 ?
-        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
+        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
           <div className="bg-white text-text-brown-original">
-            <div className="container px-6 py-8 mx-auto">
-              <p className="text-xl text-center ">
-                料金の目安
-              </p>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}>
+              <h2 className="text-sm title-font tracking-widest">Cost</h2>
 
-              <h1 className="mt-4 text-sm">表示価格は基準料金です。内容・規模により正確な料金をお見積りいたします。</h1>
+              <div className="container px-6 py-8 mx-auto">
+                <p className="text-xl text-center ">
+                  料金の目安
+                </p>
 
-              <div className="mt-6 space-y-8 xl:mt-12">
-                <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-amber-800 rounded-xl ">
-                  <div className="flex flex-col items-center justify-center">
-                    <h2 className="text-sm whitespace-nowrap">月額プラン</h2>
+                <h1 className="mt-4 text-sm">表示価格は基準料金です。内容・規模により正確な料金をお見積りいたします。</h1>
+
+                <div className="mt-6 space-y-8 xl:mt-12">
+                  <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-amber-800 rounded-xl ">
+                    <div className="flex flex-col items-center justify-center">
+                      <h2 className="text-sm whitespace-nowrap">月額プラン</h2>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <h2 className=" text-lg font-semibold">3万円~</h2><span className="text-base font-medium">/月</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center justify-center">
-                    <h2 className=" text-lg font-semibold">3万円~</h2><span className="text-base font-medium">/月</span>
+
+                  <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-amber-800 rounded-xl">
+                    <div className="flex flex-col items-center justify-center">
+                      <h2 className="text-sm whitespace-nowrap">初期費用</h2><p>+</p><h2 className="text-sm whitespace-nowrap">定額プラン</h2>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <h2 className=" text-lg font-semibold">30万~+2万~</h2><span className="text-base font-medium">/月</span>
+                    </div>
                   </div>
+
                 </div>
-
-                <div className="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-amber-800 rounded-xl">
-                  <div className="flex flex-col items-center justify-center">
-                    <h2 className="text-sm whitespace-nowrap">初期費用</h2><p>+</p><h2 className="text-sm whitespace-nowrap">定額プラン</h2>
-                  </div>
-                  <div className="flex flex-col items-center justify-center">
-                    <h2 className=" text-lg font-semibold">30万+2万~</h2><span className="text-base font-medium">/月</span>
-                  </div>
-                </div>
-
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
         :
-        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center border-2 border-teal-500">
-          <div className="bg-white">
-            <div className="container px-6 py-8 mx-auto">
-              <div className="xl:items-center xl:-mx-8 xl:flex">
-                <div className="flex flex-col items-center xl:items-start xl:mx-8">
-                  <h1 className="text-2xl font-medium capitalize lg:text-3xl">料金の目安</h1>
+        <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-center">
 
-                  <div className="mt-4">
-                    <span className="inline-block w-40 h-1 border-2 border-amber-800 rounded-full"></span>
-                    <span className="inline-block w-3 h-1 mx-1 border-2 border-amber-800 rounded-full"></span>
-                    <span className="inline-block w-1 h-1 border-2 border-amber-800 rounded-full"></span>
-                  </div>
+          <div className="container px-6 py-8 mx-auto bg-white xl:items-center xl:-mx-8 xl:flex rounded-2xl">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}>
+              <h2 className="text-sm title-font tracking-widest">Cost</h2>
+              <div className="flex flex-col items-center xl:items-start xl:mx-8">
+                <h1 className="text-2xl font-medium capitalize lg:text-3xl">料金の目安</h1>
 
-                  <p className="mt-4 text-sm">
-                    表示価格は基準料金です。内容・規模により正確な料金をお見積りいたします。
-                  </p>
+                <div className="mt-4">
+                  <span className="inline-block w-40 h-1 border-2 border-amber-800 rounded-full"></span>
+                  <span className="inline-block w-3 h-1 mx-1 border-2 border-amber-800 rounded-full"></span>
+                  <span className="inline-block w-1 h-1 border-2 border-amber-800 rounded-full"></span>
                 </div>
 
-                <div className="flex flex-row xl:mx-8">
-                  <div className="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                    <div className="w-full h-full flex flex-col border rounded-lg md:mx-4 ">
-                      <div className="p-6">
-                        <h1 className="text-xl font-semibold capitalize lg:text-2xl">月額プラン</h1>
+                <p className="mt-4 text-sm">
+                  表示価格は基準料金です。内容・規模により正確な料金をお見積りいたします。
+                </p>
+              </div>
 
-                        <p className="mt-4">
-                          月額払いは、制作が完了し、ホームページが公開されるまでは費用が一切発生いたしません。制作完了後に月額料金を支払う流れになります。
-                        </p>
+              <div className="flex flex-row xl:mx-8">
+                <div className="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
+                  <motion.div className="w-full h-full flex flex-col border rounded-lg md:mx-4"
+                    initial={{
+                      opacity: 0,
+                      y: 50,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      delay: 0.25,
+                      duration: 1,
+                    }}>
+                    <div className="p-6">
+                      <h1 className="text-xl font-semibold capitalize lg:text-2xl">月額プラン</h1>
 
-                        <h2 className="mt-4 text-xl font-medium sm:text-xl">3万円~ <span className="text-base font-medium">/月</span></h2>
+                      <p className="mt-4">
+                        月額払いは、制作が完了し、ホームページが公開されるまでは費用が一切発生いたしません。制作完了後に月額料金を支払う流れになります。
+                      </p>
+
+                      <h2 className="mt-4 text-xl font-medium sm:text-xl">3万円~ <span className="text-base font-medium">/月</span></h2>
+
+                    </div>
+
+                    <hr className="border-gray-200" />
+
+                    <div className="p-6">
+                      <h1 className="text-lg font-medium capitalize lg:text-xl">含まれているモノ:</h1>
+
+                      <div className="mt-8 space-y-4">
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
 
                       </div>
+                    </div>
+                  </motion.div>
 
-                      <hr className="border-gray-200" />
+                  <motion.div className="w-full h-full flex flex-col border rounded-lg md:mx-4"
+                    initial={{
+                      opacity: 0,
+                      y: 50,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      delay: 0.5,
+                      duration: 1,
+                    }}>
+                    <div className="p-6">
+                      <h1 className="text-xl font-semibold capitalize lg:text-2xl">初期費用 + 定額プラン</h1>
 
-                      <div className="p-6">
-                        <h1 className="text-lg font-medium capitalize lg:text-xl">含まれているモノ:</h1>
+                      <p className="mt-4">
+                        一般的な支払いプランです。ホームページ制作費は、制作着手前に総額の半額を支払い、制作完了後に残りの半額を支払う流れになります。
+                      </p>
 
-                        <div className="mt-8 space-y-4">
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
+                      <h2 className="mt-4 text-xl font-medium sm:text-xl">30万~ + 2万円~ <span className="text-base font-medium">/月</span></h2>
+                    </div>
 
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
+                    <hr className="border-gray-200" />
 
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
+                    <div className="p-6">
+                      <h1 className="text-lg font-medium capitalize lg:text-xl">含まれているモノ:</h1>
 
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
+                      <div className="mt-8 space-y-4">
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
 
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
+                        </div>
+
+                        <div className="flex flex-row-reverse items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">All limited links</span>
                         </div>
                       </div>
                     </div>
-
-                    <div className="w-full h-full flex flex-col border rounded-lg md:mx-4">
-                      <div className="p-6">
-                        <h1 className="text-xl font-semibold capitalize lg:text-2xl">初期費用 + 定額プラン</h1>
-
-                        <p className="mt-4">
-                          支払い方法として、一般的な料金プランです。ホームページ制作費は、制作着手前に総額の半額を支払い、制作完了後に残りの半額を支払う流れになります。
-                        </p>
-
-                        <h2 className="mt-4 text-xl font-medium sm:text-xl">30万~ + 2万円~ <span className="text-base font-medium">/月</span></h2>
-                      </div>
-
-                      <hr className="border-gray-200" />
-
-                      <div className="p-6">
-                        <h1 className="text-lg font-medium capitalize lg:text-xl">含まれているモノ:</h1>
-
-                        <div className="mt-8 space-y-4">
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-
-                          <div className="flex items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-
-                          <div className="flex flex-row-reverse items-center ">
-                            <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                            <span className="mx-4">All limited links</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
     }
@@ -415,17 +480,17 @@ const Cost = () => {
 const About = () => {
   const { width, height } = useThree((state) => state.viewport)
   return (
-    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around border-2 border-teal-500">
+    <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl max-auto relative flex flex-col align-middle justify-around">
 
       <div className="flex flex-col align-middle items-center justify-center">
 
-        <div className="max-w-2xl shadow shadow-gray-400 sm:rounded-lg bg-white mt-10">
+        <div className="max-w-2xl shadow shadow-gray-400 sm:rounded-lg bg-white mt-10 border-2 border-amber-800">
           <div className="px-4 py-5 sm:px-6">
             <h3 className=" text-center">
               組織概要
             </h3>
           </div>
-          <div className="border-t border-gray-300">
+          <div className="border-t-2 border-amber-800">
             <dl>
               <div className="px-4 sm:py-5 py-2 sm:grid sm:grid-cols-3 sm:gap-4 gap-1 sm:px-6">
                 <dt className="">
@@ -474,7 +539,7 @@ const About = () => {
 
 
       <footer className="mb-4 pt-4 sm:pt-10 lg:pt-12 xs:pt-16 mx-auto max-w-screen-2xl px-2 md:px-4 xs:px-6">
-        <div className="flex flex-col items-center border-t pt-4 sm:pt-6 xs:pt-8">
+        <div className="flex flex-col items-center border-t-2 border-amber-800 pt-4 sm:pt-6 xs:pt-8">
           <nav className="mb-2 sm:mb-4 xs:mb-2 flex flex-wrap justify-center gap-x-2 gap-y-1 md:justify-start md:gap-4 xs:gap-x-1 xs:gap-y-0">
             <a href="/question" className="hover:translate-y-[-5px] transition duration-500">よくある質問FAQ</a>
             <a href="/privacy" className="hover:translate-y-[-5px] transition duration-500">個人情報保護に関する方針</a>
@@ -510,8 +575,6 @@ const About = () => {
           </div>
         </div>
       </footer>
-
-
     </section>
   )
 }
