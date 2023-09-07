@@ -31,7 +31,7 @@ export default function Question() {
               <img src="/textures/question.svg" className="w-8 h-8" />
             </span>
             <h3 className="mb-3 text-base font-semibold">Web制作を依頼する場合、どういった料金体系になりますか?</h3>
-            <p className="text-sm">Web制作にかかる料金は、最初に行われる要件定義の段階で確定します。そのため、ご希望の機能やデザインに応じて料金が変動します。<br />例えば、「3Dモデル(1シーン)/9ページ/保守/宣材写真撮影(最大5点)」などの機能を実装するケースでは、月額3万円でのご提供が可能です。</p>
+            <p className="text-sm">Web制作にかかる料金は、最初に行われる要件定義の段階で確定します。そのため、ご希望の機能やデザインに応じて料金が変動します。<br />例えば、「3Dモデル(1シーン)/9ページ/保守/宣材写真撮影(最大5点)」などの機能を実装するケースでは、月額4万円でのご提供が可能です。</p>
           </div>
 
           <div className="relative rounded-lg p-5 pt-8 bg-bg-pink-thin" style={{ borderRadius: "1rem" }}>
@@ -39,7 +39,7 @@ export default function Question() {
               <img src="/textures/question.svg" className="w-8 h-8" />
             </span>
             <h3 className="mb-3 text-base font-semibold">使用している言語・開発ツール・ソフトウェアについて教えてください。</h3>
-            <p className="text-sm">JavaScript・SQLを使用しています。プラットフォームはVercel・GitHubを使用しています。ソフトウェアについては、Illustrator・Blender等を使用しています。</p>
+            <p className="text-sm">JavaScript・React・Next.jsを使用しています。プラットフォームはVercel・GitHubを使用しています。ソフトウェアについては、Illustrator・Blender等を使用しています。</p>
           </div>
 
           <div className="relative rounded-lg p-5 pt-8 bg-bg-pink-thin" style={{ borderRadius: "1rem" }}>
@@ -54,8 +54,8 @@ export default function Question() {
             <span className="absolute -top-4 left-4 items-center justify-center rounded-full">
               <img src="/textures/question.svg" className="w-8 h-8" />
             </span>
-            <h3 className="mb-3 font-semibold">イラストなど3Dモデル以外の制作依頼は受け付けていますか?</h3>
-            <p className="text-sm">3Dモデル</p>
+            <h3 className="mb-3 font-semibold">イラストやロゴなど、Web制作以外の依頼は受け付けていますか?</h3>
+            <p className="text-sm">もちろんです。ただし、イラストではA4,B4など大きさによって提示する料金プランが異なる場合があります。ご用意しているメールアドレスにお問い合わせください。</p>
           </div>
 
           <div className="relative rounded-lg p-5 pt-8 bg-bg-pink-thin" style={{ borderRadius: "1rem" }}>

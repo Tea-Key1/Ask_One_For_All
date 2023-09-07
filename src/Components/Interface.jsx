@@ -21,9 +21,6 @@ export default function Interface(props) {
 }
 
 const Home = () => {
-
-
-
   return (
 
     <section className="h-[100dvh] w-screen px-8 max-w-screen-2xl flex flex-col relative text-center justify-start">
@@ -254,8 +251,13 @@ function Process() {
                 <div className="flex justify-center items-center w-full h-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem] dark:bg-gray-600 dark:text-gray-400">www.askone.com</div>
               </div>
 
-              <div className="bg-gray-800 rounded-b-lg shadow-xl ">
-                <img className="max-w-full h-auto rounded-b-xl" src="/textures/flower.jpg" />
+              <div className="bg-gray-800 rounded-b-md shadow-xl ">
+                <a href="https://homepage-sdgs-co.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <img className="max-w-full h-auto rounded-b-md" src="/textures/sdgs_home.png" />
+                  <span className="absolute text-sm left-0 right-0 text-center mt-5">
+                    projects
+                  </span>
+                </a>
               </div>
             </figure>
           </div>
@@ -300,7 +302,7 @@ const Cost = () => {
                       <h2 className="text-sm whitespace-nowrap">月額プラン</h2>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                      <h2 className=" text-lg font-semibold">3万円~</h2><span className="text-base font-medium">/月</span>
+                      <h2 className=" text-lg font-semibold">4万円~</h2><span className="text-base font-medium">/月</span>
                     </div>
                   </div>
 
@@ -309,7 +311,7 @@ const Cost = () => {
                       <h2 className="text-sm whitespace-nowrap">初期費用</h2><p>+</p><h2 className="text-sm whitespace-nowrap">定額プラン</h2>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                      <h2 className=" text-lg font-semibold">30万~+2万~</h2><span className="text-base font-medium">/月</span>
+                      <h2 className=" text-lg font-semibold">30万~+3万~</h2><span className="text-base font-medium">/月</span>
                     </div>
                   </div>
 
@@ -371,7 +373,7 @@ const Cost = () => {
                         月額払いは、制作が完了し、ホームページが公開されるまでは費用が一切発生いたしません。制作完了後に月額料金を支払う流れになります。
                       </p>
 
-                      <h2 className="mt-4 text-xl font-medium sm:text-xl">3万円~ <span className="text-base font-medium">/月</span></h2>
+                      <h2 className="mt-4 text-xl font-medium sm:text-xl">4万円~ <span className="text-base font-medium">/月</span></h2>
 
                     </div>
 
@@ -381,26 +383,29 @@ const Cost = () => {
                       <h1 className="text-lg font-medium capitalize lg:text-xl">含まれているモノ:</h1>
 
                       <div className="mt-8 space-y-4">
+
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">運用・保守サービス</span>
                         </div>
 
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">定期SEO分析</span>
                         </div>
 
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">オリジナル3Dモデル</span>
                         </div>
-
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">三年契約更新</span>
                         </div>
-
+                        <div className="flex flex-row-reverse items-center ">
+                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
+                          <span className="mx-4">＋ブログ機能</span>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -425,7 +430,7 @@ const Cost = () => {
                         一般的な支払いプランです。ホームページ制作費は、制作着手前に総額の半額を支払い、制作完了後に残りの半額を支払う流れになります。
                       </p>
 
-                      <h2 className="mt-4 text-xl font-medium sm:text-xl">30万~ + 2万円~ <span className="text-base font-medium">/月</span></h2>
+                      <h2 className="mt-4 text-xl font-medium sm:text-xl">30万~ + 3万円~ <span className="text-base font-medium">/月</span></h2>
                     </div>
 
                     <hr className="border-gray-200" />
@@ -436,33 +441,28 @@ const Cost = () => {
                       <div className="mt-8 space-y-4">
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">運用・保守サービス</span>
                         </div>
 
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">定期SEO分析</span>
                         </div>
 
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">オリジナル3Dモデル</span>
                         </div>
-
                         <div className="flex items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
-                        </div>
-
-                        <div className="flex items-center ">
-                          <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">二年契約更新</span>
                         </div>
 
                         <div className="flex flex-row-reverse items-center ">
                           <img src="/textures/check.svg" className="w-4 h-4 p-1 bg-blue-200 rounded-full" viewBox="0 0 20 20" fill="white" />
-                          <span className="mx-4">All limited links</span>
+                          <span className="mx-4">＋ブログ機能</span>
                         </div>
+
                       </div>
                     </div>
                   </motion.div>
@@ -541,13 +541,13 @@ const About = () => {
       <footer className="mb-4 pt-4 sm:pt-10 lg:pt-12 xs:pt-16 mx-auto max-w-screen-2xl px-2 md:px-4 xs:px-6">
         <div className="flex flex-col items-center border-t-2 border-amber-800 pt-4 sm:pt-6 xs:pt-8">
           <nav className="mb-2 sm:mb-4 xs:mb-2 flex flex-wrap justify-center gap-x-2 gap-y-1 md:justify-start md:gap-4 xs:gap-x-1 xs:gap-y-0">
-            <a href="/question" className="hover:translate-y-[-5px] transition duration-500">よくある質問FAQ</a>
-            <a href="/privacy" className="hover:translate-y-[-5px] transition duration-500">個人情報保護に関する方針</a>
+            <a href="/question" className="h-5 hover:translate-y-[-5px] transition duration-500">よくある質問FAQ</a>
+            <a href="/privacy" className="h-5 hover:translate-y-[-5px] transition duration-500">個人情報保護に関する方針</a>
           </nav>
           <div className="body-font">
             <div className="container px-2 py-2 xs:py-3 mx-auto flex items-center justify-center">
               <a className="flex title-font font-medium items-center">
-                <img src="\textures\astronauts.svg" className="w-12 h-12 p-1 rounded-full" />
+                <img src="/textures/astronauts.svg" className="w-12 h-12 p-1 rounded-full" />
                 {width >= 11 ? (
                   <p className="ml-2 text-2lg">
                     Ask One
@@ -559,12 +559,12 @@ const About = () => {
                 <a className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">askone40@gmai.com</a>
               </p>
               <span className="inline-flex ml-2">
-                <a href="https://twitter.com/Ask_One_For_All">
+                <a href="https://twitter.com/Ask_One_For_All" target="_blank" rel="noopener noreferrer">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                   </svg>
                 </a>
-                <a className="ml-2 text-gray-500">
+                <a className="ml-2 text-gray-500" target="_blank" rel="noopener noreferrer">
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>

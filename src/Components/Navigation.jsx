@@ -33,9 +33,9 @@ export default function Navigation(props) {
                 }}
             >
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-around mx-auto">
-                    <a href="/" className="flex items-center py-4 px-3 hover:bg-white hover:text-red-300 hover:translate-y-[-5px] transition duration-500">
+                    <a href="/" className="flex items-center py-4 px-3 rounded-xl hover:bg-white hover:text-red-300 hover:translate-y-[-5px] transition duration-500">
                         <img src="/textures/astronauts.svg" className="h-10 w-10 mr-3" />
-                        <span className="self-center text-2xl font-semibold ">Ask One</span>
+                        <span className="self-center text-2xl font-semibold" style={{translate: "no"}}>Ask One</span>
                     </a>
 
 
@@ -47,7 +47,7 @@ export default function Navigation(props) {
                             <SectionButton label="制作の流れ" onClick={() => setSection(3)} />
                             <SectionButton label="コスト" onClick={() => setSection(4)} />
                             <SectionButton label="組織概要" onClick={() => setSection(5)} />
-                            <a href="/document" className="block mr-6 p-5 border-4 border-blue-100 hover:bg-blue-100 hover:text-blue-400 hover:translate-y-[-5px] transition duration-500">資料請求</a>
+                            <a href="/document" className="block mr-6 p-5 rounded-xl border-4 border-blue-100 hover:bg-blue-100 hover:text-blue-400 hover:translate-y-[-5px] transition duration-500">資料請求</a>
                         </div>
 
 
@@ -96,7 +96,7 @@ const SectionButton = (props) => {
         <button
             type="button"
             onClick={onClick}
-            className="block p-5 hover:bg-white hover:text-pink-300 hover:translate-y-[-5px] transition duration-500"
+            className="block p-5 rounded-xl hover:bg-white hover:text-pink-300 hover:translate-y-[-5px] transition duration-500"
         >
             {label}
         </button>
