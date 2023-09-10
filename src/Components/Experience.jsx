@@ -1,21 +1,19 @@
-import { useGLTF, Text, PresentationControls, ContactShadows, useAnimations } from "@react-three/drei";
+import { useGLTF, Text, PresentationControls, useAnimations } from "@react-three/drei";
 import { BallCollider, Physics, RigidBody, CylinderCollider } from "@react-three/rapier"
 import { Fragment, useEffect, useRef } from "react"
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three"
 
-
-
 function Origin() {
   return (
-    <>
+    <Fragment>
       <RigidBody position={[0, 0, 0]} type="kinematicPosition" scale={0.1}>
         <mesh>
           <sphereGeometry args={[1, 8, 8]} />
           <meshStandardMaterial transparent opacity={0} />
         </mesh>
       </RigidBody>
-    </>
+    </Fragment>
   )
 }
 
@@ -52,7 +50,7 @@ function Animal() {
   })
 
   return (
-    <>
+    <Fragment>
       <RigidBody mass={0.1} linearDamping={3} angularDamping={1} friction={0} position={[-10, -5, 0]} ref={api} colliders={false} dispose={null} restitution={0}>
         <BallCollider args={[1]} />
         <CylinderCollider rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 1.2]} args={[0.15, 0.27]} />
@@ -77,7 +75,7 @@ function Animal() {
         difficult to start.
         <meshBasicMaterial color={"#2B2730"} toneMapped={false} />
       </Text>
-    </>
+    </Fragment>
   )
 }
 
@@ -116,8 +114,8 @@ function PC(props) {
     animations.actions.textAction013.play()
   }, [])
 
-  return (<>
-    <group >
+  return (<Fragment>
+    <group>
       <PresentationControls
         config={{ mass: 2, tension: 500 }}
         snap={{ mass: 2, tension: 500 }}
@@ -126,7 +124,7 @@ function PC(props) {
         <primitive object={pc.scene} scale={Math.min(2, 0.15 * width)} position={[-0.2 * width, -17, 0]} rotation={[0.3, 0.5, 0]} />
       </PresentationControls>
     </group>
-  </>)
+  </Fragment>)
 }
 
 
@@ -172,7 +170,7 @@ export default function Experience(props) {
   const { bottleColor } = props
 
   return (
-    <>
+    <Fragment>
       <Physics gravity={[0, 0, 0]}>
         <Origin />
         <Pointer />
@@ -182,6 +180,6 @@ export default function Experience(props) {
       <PC width={width} />
       <Bottle width={width} bottleColor={bottleColor}/>
 
-    </>
+    </Fragment>
   )
 }
