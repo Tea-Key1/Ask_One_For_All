@@ -39,7 +39,7 @@ export default function Question() {
               <img src="/textures/question.svg" className="w-8 h-8" />
             </span>
             <h3 className="mb-3 text-base font-semibold">使用している言語・開発ツール・ソフトウェアについて教えてください。</h3>
-            <p className="text-sm">JavaScript・React・Next.jsを使用しています。プラットフォームはVercel・GitHubを使用しています。ソフトウェアについては、Illustrator・Blender等を使用しています。</p>
+            <p className="text-sm">JavaScript・TypeScript・React・Next.js・tailwind cssを使用しています。プラットフォームはVercel・GitHubを使用しています。ソフトウェアについては、Illustrator・Blender等を使用しています。</p>
           </div>
 
           <div className="relative rounded-lg p-5 pt-8 bg-bg-pink-thin" style={{ borderRadius: "1rem" }}>
